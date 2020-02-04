@@ -1,0 +1,14 @@
+.sidebar {
+    position: fixed;
+    right: -320px;
+    top: 0px;
+    bottom: 0px;
+    width: 320px;
+    transition: right .3s;
+    background: '#f8f4ff';
+    z-index: 1;
+}
+
+.open {
+    right: 0px;
+}

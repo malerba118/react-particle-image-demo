@@ -1,0 +1,53 @@
+.App-link {
+  color: #61dafb;
+}
+
+.content {
+  height: 100vh;
+  width: 100vw;
+}
+
+.hamburger {
+  transform: scale(.5);
+}
+
+.title {
+  margin: 16px;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  composes: flex-row from global;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  composes: flex-row from global;
+  justify-content: space-between;
+}
+
+.imgInfo {
+  margin: 16px;
+}
+
+.nav {
+  margin: 16px;
+}
+
+.nav span {
+  margin: 0 16px;
+}
+
+.links {
+  margin: 16px;
+}

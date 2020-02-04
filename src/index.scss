@@ -1,0 +1,35 @@
+$hamburger-layer-color: var(--light);
+$hamburger-active-layer-color: var(--dark);
+
+@import "../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
+
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif; 
+  letter-spacing: 2px; 
+  font-weight: 600;
+  font-size: .65em;
+  color: var(--light);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+:root {
+  --light: #d3d7ea;
+  --dark: black;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: row;
+}
