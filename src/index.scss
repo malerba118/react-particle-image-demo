@@ -33,3 +33,19 @@ code {
   display: flex;
   flex-direction: row;
 }
+
+
+.clickable {
+  opacity: 1;
+  cursor: pointer;
+  transition: opacity .3s;
+}
+
+.clickable:hover {
+  opacity: .65;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}

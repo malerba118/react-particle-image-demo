@@ -13,6 +13,7 @@
 
 .title {
   margin: 16px;
+  composes: clickable from global;
 }
 
 .header {
@@ -42,12 +43,23 @@
 
 .nav {
   margin: 16px;
+  display: flex;
 }
 
-.nav span {
-  margin: 0 16px;
+.navArrow {
+  composes: clickable from global;
 }
 
 .links {
   margin: 16px;
+  composes: clickable from global;
+}
+
+.sidebar {
+  height: 100%;
+  background-color: var(--light);
+  color: var(--dark);
+  composes: flex-row from global;
+  align-items: center;
+  justify-content: center;
 }

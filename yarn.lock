@@ -1014,6 +1014,14 @@
   resolved "https://registry.yarnpkg.com/@csstools/normalize.css/-/normalize.css-10.1.0.tgz#f0950bba18819512d42f7197e56c518aa491cf18"
   integrity sha512-ij4wRiunFfaJxjB0BdrYHIH8FxBJpOwNPhhAcunlmPdXudL1WQV1qoP9un6JsEBAgQH+7UXyyjh0g7jTxXK6tg==
 
+"@elsdoerfer/react-arrow@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@elsdoerfer/react-arrow/-/react-arrow-1.0.4.tgz#5355505617605ae443ab1cc2a58b708bb0fab544"
+  integrity sha512-AU3UITrHqh//nVKvIEHWtgAEVjtGKmnU/2kXMYCz2e/MPiyJUICiUIXTe8lE67pcD02HPxIN73GC/4ryvLBAKg==
+  dependencies:
+    babel-runtime "^6.25.0"
+    prop-types "^15.7.2"
+
 "@hapi/address@2.x.x":
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/@hapi/address/-/address-2.1.4.tgz#5d67ed43f3fd41a69d4b9ff7b56e7c0d1d0a81e5"
@@ -2247,7 +2255,7 @@ babel-preset-react-app@^9.1.0:
     babel-plugin-macros "2.7.1"
     babel-plugin-transform-react-remove-prop-types "0.4.24"
 
-babel-runtime@^6.26.0:
+babel-runtime@^6.25.0, babel-runtime@^6.26.0:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-runtime/-/babel-runtime-6.26.0.tgz#965c7058668e82b55d7bfe04ff2337bc8b5647fe"
   integrity sha1-llxwWGaOgrVde/4E/yM3vItWR/4=

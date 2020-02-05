@@ -5,8 +5,8 @@
     bottom: 0px;
     width: 320px;
     transition: right .3s;
-    background: '#f8f4ff';
-    z-index: 1;
+    background-color: var(--light);
+    z-index: 2;
 }
 
 .open {
