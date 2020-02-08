@@ -1,0 +1,14 @@
+
+.root {
+  height: 100%;
+}
+
+.header {
+  padding: 18px;
+  composes: text-lg from global;
+}
+
+.controls {
+  padding: 24px;
+  padding-top: 0;
+}
