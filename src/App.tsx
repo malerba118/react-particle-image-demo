@@ -103,8 +103,7 @@ const App: React.FC = () => {
   const src: string = sources[srcIndex]
 
   return (
-
-    <div className={styles.content} style={{height: '100vh'}}>
+    <div className={styles.content} onScroll={e => {e.stopPropagation(); e.preventDefault()}}>
       <div className={styles.header}>
         <p className={styles.title}>PARTICLE IMAGE</p>
         <Hamburger className={styles.hamburger} onClick={() => setSidebarOpen(prev => !prev)} open={sidebarOpen}/>

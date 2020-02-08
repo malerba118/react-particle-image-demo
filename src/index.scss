@@ -3,6 +3,10 @@ $hamburger-active-layer-color: var(--dark);
 
 @import "../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
 
+html, body, #root {
+  height: 100%;
+}
+
 html {
   background-color: var(--dark);
 }
