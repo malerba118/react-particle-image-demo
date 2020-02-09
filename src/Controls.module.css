@@ -4,8 +4,8 @@
 }
 
 .header {
-  padding: 18px;
-  composes: text-lg from global;
+  padding: 16px;
+  composes: text-md from global;
 }
 
 .controls {

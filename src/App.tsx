@@ -35,7 +35,10 @@ const particleOptionsMap: ParticleOptionsMap = {
           return pixel.b > 50
       },
       color: () => '#61dafb',
-      friction: () => .15
+      friction: () => .15,
+      initialPosition: ({canvasDimensions}) => {
+        return new Vector(canvasDimensions.width / 2, canvasDimensions.height / 2)
+      }
   },
   [COFFEE_URL]: {
     radius: () => (Math.random()*1.4 + .5) * defaultScale,
@@ -48,7 +51,10 @@ const particleOptionsMap: ParticleOptionsMap = {
     color: ({x, y, image}: ParticleOptionParams) => {
       return 'white'
     },
-    friction: () => .15
+    friction: () => .15,
+    initialPosition: ({canvasDimensions}) => {
+      return new Vector(canvasDimensions.width / 2, canvasDimensions.height / 2)
+    }
   },
   [COLOR_WHEEL_URL]: {
     radius: ({x, y, image}: ParticleOptionParams) => {
@@ -62,8 +68,6 @@ const particleOptionsMap: ParticleOptionsMap = {
         return magnitude < .8
     },
     color: ({x, y, image}: ParticleOptionParams) => {
-      const pixel = image.get(x, y)
-      const alpha = (pixel.r + pixel.g + pixel.b) / 3 / 255 * pixel.a
       return `orange`
     },
     friction: () => .23,
@@ -117,7 +121,20 @@ const App: React.FC = () => {
         {({ width, height }: Dimensions) => {
           if (width && height)  {
             return (
-              <ParticleImage key={`${params.numParticles}`} backgroundColor="rgb(31, 31, 31)" src={src} maxParticles={params.numParticles} height={height} width={width} particleOptions={particleOptionsMap[src]} scale={params.scale} entropy={params.entropy} interactiveForce={(x: number, y: number) => forces.whiteHole(x, y)}/>
+              <ParticleImage 
+                key={`${params.numParticles}`} 
+                backgroundColor="rgb(31, 31, 31)" 
+                src={src} 
+                maxParticles={params.numParticles} 
+                height={height} 
+                width={width} 
+                particleOptions={particleOptionsMap[src]} 
+                scale={params.scale} 
+                entropy={params.entropy} 
+                mouseMoveForce={(x: number, y: number) => forces.disturbance(x, y, 6)}
+                touchMoveForce={(x: number, y: number) => forces.disturbance(x, y, 6)}
+                mouseDownForce={(x: number, y: number) => forces.disturbance(x, y, 50)}
+              />
             )
           }
           return <div />
@@ -129,7 +146,7 @@ const App: React.FC = () => {
           <ArrowButton onClick={prev} className={styles.navArrow} arrowPlacement="left" arrowDirection="left" text="PREV" />
           <ArrowButton onClick={next} className={styles.navArrow} arrowPlacement="right" arrowDirection="right" text="NEXT" />
         </div>
-        <a href="https://github.com/malerba118/react-particle-image" target="_blank" className={styles.links}>GITHUB</a>
+        <a href="https://github.com/malerba118/react-particle-image" target="_blank" rel="noopener noreferrer" className={styles.links}>GITHUB</a>
       </div>
     </div>
   );
